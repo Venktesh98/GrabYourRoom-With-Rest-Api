@@ -20,6 +20,7 @@ function RoomDetails(props) {
   const [user, setUser] = useState("");
   const classes = useStyles();
   const getUserId = JSON.parse(localStorage.getItem("userId"));
+  console.log("USerID:",getUserId);
 
   const userCheckInCheckOut = {
     checkIn: user.checkIn,
@@ -75,6 +76,8 @@ function RoomDetails(props) {
     (parseIntoDateFormat.getMonth() + 1) +
     "-" +
     parseIntoDateFormat.getDate();
+
+  console.log("finalCheckInDate:",finalCheckInDate);
 
   const handleBackToRooms = () => {
     props.history.push(`/rooms-listing?checkIn=${finalCheckInDate}`);

@@ -66,6 +66,8 @@ function SearchRoom(props) {
       checkOut: response.checkOut,
     };
 
+    console.log("UserDEtails:",userDetails);
+
     const pushCheckInData = () => {
       props.history.push(`/rooms-listing?checkIn=${finalCheckInDate}`);
     };
@@ -102,7 +104,7 @@ function SearchRoom(props) {
     }
   };
 
-  console.log("Responses:", response);
+  console.log("Responses Input Change:", response);
 
   return (
     <React.Fragment>
@@ -168,3 +170,5 @@ function SearchRoom(props) {
 
 // withRouter as if we want to pass the data to another page after the completion of some specific function
 export default withRouter(SearchRoom);
+// export default SearchRoom;
+
